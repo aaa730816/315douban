@@ -1,0 +1,123 @@
+#filmImg{
+    /*width: 300px;*/
+
+    height:400px;
+    float: left;
+}
+#film img{
+    height: 400px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px auto;
+}
+#filmInfo{
+    /*width: 700px;*/
+    height:400px;
+    word-break: break-all;
+    word-wrap: break-word;
+    float: left;
+    /*margin-left: 100px;*/
+}
+#filmInfo table{
+    padding-left: 100px;
+    border-collapse: separate;
+    border-spacing: 0px 20px;
+}
+#filmSc{
+    height: 300px;
+    /*width: 200px;*/
+}
+#filmDBSc{
+    height: 100px;
+    /*width: 200px;*/
+}
+#curFilmScore{
+    /*width: 200px;*/
+    height: 200px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#stars img{
+    width: 30px;
+    height: 30px;
+}
+#userScore{
+    margin-top:20px;
+}
+#userScoreFilm{
+    margin: 0px auto;
+    text-align: center;
+}
+#filmScore{
+    text-align: center;
+    float: right;
+    /*width: 200px;*/
+    height: 400px;
+}
+#filmScore div{
+    /*text-align: center;*/
+    float: left;
+    margin: 0px auto;
+}
+#filmIntro{
+    margin: 50px 50px 20px 50px;
+}
+#shortCom{
+    padding: 50px 50px 0px 50px;
+}
+#longCom{
+    padding: 50px 50px 0px 50px;
+}
+#filmIntro span{
+    font-size: 18px;
+    color: #0091ea;
+}
+#moreScom{
+    text-align: center;
+}
+#moreLcom{
+    text-align: center;
+}
+.showContent{
+    text-align: center;
+    cursor: pointer;
+    /*vertical-align: middle;*/
+}
+.showContent:hover{
+    background-color: #fafafa;
+}
+span:first-child{
+    font-size: 18px;
+    color: #0091ea;
+}
+.likesCom{
+    cursor: pointer;
+}
+.likelCom{
+    cursor: pointer;
+}
+#longCom span{
+    font-size: 18px;
+    color: #0091ea;
+}
+#introContent{
+    padding: 20px 50px 0px 50px;
+    font-size: 16px;
+}
+.panel{
+    margin: 20px 50px 0px 50px;
+    font-size: 16px;
+}
+.lComContent{
+    margin: 10px 17px 0px 17px;
+    font-size: 16px;
+}
+#commentHint textarea{
+    resize: none;
+    border-radius: 5px;
+}
+.modal-body{
+    width: 600px;
+    /*text-align: center;*/
+}

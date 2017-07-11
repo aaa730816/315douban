@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="main.entities.Music" table="music" schema="315douban">
+        <id name="musicId" column="MUSIC_ID"/>
+        <property name="musicName" column="MUSIC_NAME"/>
+        <property name="musicSinger" column="MUSIC_SINGER"/>
+        <property name="musicType" column="MUSIC_TYPE"/>
+        <property name="musicDate" column="MUSIC_DATE"/>
+        <property name="musicPub" column="MUSIC_PUB"/>
+        <property name="musicIntro" column="MUSIC_INTRO"/>
+        <property name="musicSongs" column="MUSIC_SONGS"/>
+        <property name="musicSc" column="MUSIC_SC"/>
+        <property name="musicDbsc" column="MUSIC_DBSC"/>
+        <property name="musicScTime" column="MUSIC_SCTIME"/>
+        <set name="musicScoms">
+            <key column="MUSIC_ID"></key>
+            <one-to-many class="main.entities.MusicScom"></one-to-many>
+        </set>
+        <set name="musicLcoms">
+            <key column="MUSIC_ID"></key>
+            <one-to-many class="main.entities.MusicLcom"></one-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

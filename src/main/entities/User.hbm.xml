@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="main.entities.User" table="user" schema="315douban">
+        <id name="userId" column="USER_ID">
+            <generator class="native"/>
+        </id>
+        <property name="username" column="USERNAME"/>
+        <property name="password" column="PASSWORD"/>
+        <property name="registerDate" column="REGISTER_DATE" type="timestamp"/>
+        <property name="image" column="IMAGE"/>
+        <set name="bookLcoms" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.BookLcom"></one-to-many>
+        </set>
+        <set name="bookScoms" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.BookScom"></one-to-many>
+        </set>
+        <set name="bookScores" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.BookScore"></one-to-many>
+        </set>
+        <set name="filmLcoms" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.FilmLcom"></one-to-many>
+        </set>
+        <set name="filmScoms" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.FilmScom"></one-to-many>
+        </set>
+        <set name="filmScores" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.FilmScore"></one-to-many>
+        </set>
+        <set name="musicLcoms" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.MusicLcom"></one-to-many>
+        </set>
+        <set name="musicScoms" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.MusicScom"></one-to-many>
+        </set>
+        <set name="musicScores" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.MusicScore"></one-to-many>
+        </set>
+        <set name="favouriteBooks" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.Book"></one-to-many>
+        </set>
+        <set name="favouriteFilms" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.Film"></one-to-many>
+        </set>
+        <set name="favouriteMusics" inverse="true">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.Music"></one-to-many>
+        </set>
+        <set name="friends" table="user2user">
+            <key column="USER_ID"></key>
+            <many-to-many class="main.entities.User" column="FRIEND_ID"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="main.entities.MusicScore" table="music_score" schema="315douban">
+        <id name="musicScoreId" column="MUSIC_SCORE_ID"/>
+        <property name="musicScore" column="MUSIC_SCORE"/>
+        <many-to-one name="user" class="main.entities.User" column="USER_ID"></many-to-one>
+        <many-to-one name="music" class="main.entities.Music" column="MUSIC_ID"></many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="main.entities.Film" table="film" schema="315douban">
+        <id name="filmId" column="FILM_ID"/>
+        <property name="filmName" column="FILM_NAME"/>
+        <property name="filmDirec" column="FILM_DIREC"/>
+        <property name="filmWri" column="FILM_WRI"/>
+        <property name="filmHero" column="FILM_HERO"/>
+        <property name="filmArea" column="FILM_AREA"/>
+        <property name="filmType" column="FILM_TYPE"/>
+        <property name="filmLang" column="FILM_LANG"/>
+        <property name="filmDate" column="FILM_DATE"/>
+        <property name="filmLen" column="FILM_LEN"/>
+        <property name="filmIntro" column="FILM_INTRO"/>
+        <property name="filmImg" column="FILM_IMG"/>
+        <property name="filmSc" column="FILM_SC"/>
+        <property name="filmDbsc" column="FILM_DBSC"/>
+        <property name="filmScTime" column="FILM_SCTIME"/>
+        <set name="filmScoms" inverse="true">
+            <key column="FILM_ID"></key>
+            <one-to-many class="main.entities.FilmScom"></one-to-many>
+        </set>
+        <set name="filmLcoms" inverse="true">
+            <key column="FILM_ID"></key>
+            <one-to-many class="main.entities.FilmLcom"></one-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="main.entities.MusicLcom" table="music_lcom" schema="315douban">
+        <id name="musicLcomId" column="MUSIC_LCOM_ID"/>
+        <property name="musicLcomContent" column="MUSIC_LCOM_CONTENT"/>
+        <property name="musicLcomDate" column="MUSIC_LCOM_DATE"/>
+        <property name="musicLcomLike" column="MUSIC_LCOM_LIKE"/>
+        <property name="title" column="MUSIC_LCOM_TITLE"/>
+        <set name="comments">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.Comment"></one-to-many>
+        </set>
+        <many-to-one name="user" class="main.entities.User" column="USER_ID"></many-to-one>
+        <many-to-one name="music" class="main.entities.Music" column="MUSIC_ID"></many-to-one>
+    </class>
+</hibernate-mapping>

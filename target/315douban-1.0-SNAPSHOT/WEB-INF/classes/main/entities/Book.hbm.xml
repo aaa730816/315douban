@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="main.entities.Book" table="book" schema="315douban">
+        <id name="bookId" column="BOOK_ID"/>
+        <property name="bookName" column="BOOK_NAME"/>
+        <property name="bookWri" column="BOOK_WRI"/>
+        <property name="bookPub" column="BOOK_PUB"/>
+        <property name="bookDate" column="BOOK_DATE"/>
+        <property name="bookPage" column="BOOK_PAGE"/>
+        <property name="bookPrice" column="BOOK_PRICE"/>
+        <property name="bookIsbn" column="BOOK_ISBN"/>
+        <property name="bookIntro" column="BOOK_INTRO"/>
+        <property name="bookWriIntro" column="BOOK_WRI_INTRO"/>
+        <property name="bookCata" column="BOOK_CATA"/>
+        <property name="bookImg" column="BOOK_IMG"/>
+        <property name="bookSc" column="BOOK_SC"/>
+        <property name="bookDbsc" column="BOOK_DBSC"/>
+        <property name="bookScTime" column="BOOK_SCTIME"/>
+        <set name="bookScoms">
+            <key column="BOOK_ID"></key>
+            <one-to-many class="main.entities.BookScom"></one-to-many>
+        </set>
+        <set name="bookLcoms">
+            <key column="BOOK_ID"></key>
+            <one-to-many class="main.entities.BookLcom"></one-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

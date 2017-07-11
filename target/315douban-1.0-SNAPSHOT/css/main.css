@@ -1,0 +1,54 @@
+#banner{
+    margin-top: 0px;
+    background-image: url("../image/banner.jpg");
+    background-size: contain;
+    height: 150px;
+}
+#bannerTitle .titleName{
+    font-size: 48px;
+}
+#search .inp{
+    margin-top: 18px;
+    width: 300px;
+    height: 33px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+#bannerTitle{
+    float: left;
+}
+#search{
+    float: left;
+}
+#banner-wrap{
+    padding-top: 33px;
+    width:500px;
+    /*margin-left: 50%;*/
+    margin:0px auto;
+}
+.tab{
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+}
+#myTab{
+    width: 800px;
+    margin:0px auto;
+}
+#loginStatus{
+    padding-top: 6px;
+    width:150px;
+    float: right;
+}
+#loginBtn{
+    margin-right: 10px;
+}
+#logout{
+    margin-left: 10px;
+}
+#content{
+    padding-top: 50px;
+    margin: 0px auto;
+}
+

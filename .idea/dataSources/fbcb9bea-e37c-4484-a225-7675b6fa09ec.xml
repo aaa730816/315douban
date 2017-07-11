@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="315douban@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="315douban">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <table id="7" parent="2" name="book"/>
+    <table id="8" parent="2" name="book_lcom"/>
+    <table id="9" parent="2" name="book_scom"/>
+    <table id="10" parent="2" name="book_score"/>
+    <table id="11" parent="2" name="comment"/>
+    <table id="12" parent="2" name="film"/>
+    <table id="13" parent="2" name="film_lcom"/>
+    <table id="14" parent="2" name="film_scom"/>
+    <table id="15" parent="2" name="film_score"/>
+    <table id="16" parent="2" name="music"/>
+    <table id="17" parent="2" name="music_lcom"/>
+    <table id="18" parent="2" name="music_scom"/>
+    <table id="19" parent="2" name="music_score"/>
+    <table id="20" parent="2" name="user"/>
+    <table id="21" parent="2" name="user2user"/>
+    <column id="22" parent="7" name="BOOK_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="7" name="BOOK_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="24" parent="7" name="BOOK_WRI">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="25" parent="7" name="BOOK_PUB">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="26" parent="7" name="BOOK_DATE">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="27" parent="7" name="BOOK_PAGE">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="28" parent="7" name="BOOK_PRICE">
+      <Position>7</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="29" parent="7" name="BOOK_ISBN">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="30" parent="7" name="BOOK_INTRO">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="7" name="BOOK_WRI_INTRO">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="7" name="BOOK_CATA">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="7" name="BOOK_IMG">
+      <Position>12</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="34" parent="7" name="BOOK_SC">
+      <Position>13</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="35" parent="7" name="BOOK_DBSC">
+      <Position>14</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="36" parent="7" name="USER_ID">
+      <Position>15</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="37" parent="7" name="FK79wektb3mlor7c1htwk6o2s1j">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="38" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BOOK_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="39" parent="7" name="FK79wektb3mlor7c1htwk6o2s1j">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <column id="40" parent="8" name="BOOK_LCOM_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="8" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="42" parent="8" name="BOOK_LCOM_CONTENT">
+      <Position>3</Position>
+      <DataType>varchar(10000)|0</DataType>
+    </column>
+    <column id="43" parent="8" name="BOOK_LCOM_DATE">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="44" parent="8" name="BOOK_LCOM_LIKE">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="45" parent="8" name="BOOK_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="46" parent="8" name="BOOK_ID">
+      <ColNames>BOOK_ID</ColNames>
+    </index>
+    <index id="47" parent="8" name="USER_ID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="48" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BOOK_LCOM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="49" parent="8" name="FKmv8058r7ncgrc4ugvga7aka4o">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="50" parent="8" name="book_lcom_ibfk_2">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="51" parent="8" name="FK3xr9gli0pdxcsmc1pbnai89c4">
+      <ColNames>BOOK_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>book</RefTableName>
+      <RefColNames>BOOK_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="52" parent="8" name="book_lcom_ibfk_1">
+      <ColNames>BOOK_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>book</RefTableName>
+      <RefColNames>BOOK_ID</RefColNames>
+    </foreign-key>
+    <column id="53" parent="9" name="BOOK_SCOM_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="9" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="55" parent="9" name="BOOK_SCOM_CONTENT">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="56" parent="9" name="BOOK_SCOM_DATE">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="57" parent="9" name="BOOK_SCOM_LIKE">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="58" parent="9" name="BOOK_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="59" parent="9" name="BOOK_ID">
+      <ColNames>BOOK_ID</ColNames>
+    </index>
+    <index id="60" parent="9" name="USER_ID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="61" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BOOK_SCOM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="62" parent="9" name="FKe1gw18u8mdqjs1s0iyiutkh3e">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="63" parent="9" name="book_scom_ibfk_2">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="64" parent="9" name="FKnwj2a02lxnp1guob20ly4e4rr">
+      <ColNames>BOOK_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>book</RefTableName>
+      <RefColNames>BOOK_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="65" parent="9" name="book_scom_ibfk_1">
+      <ColNames>BOOK_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>book</RefTableName>
+      <RefColNames>BOOK_ID</RefColNames>
+    </foreign-key>
+    <column id="66" parent="10" name="BOOK_SCORE_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="10" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="68" parent="10" name="BOOK_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="69" parent="10" name="BOOK_SCORE">
+      <Position>4</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <index id="70" parent="10" name="book_score_ibfk_2">
+      <ColNames>BOOK_ID</ColNames>
+    </index>
+    <index id="71" parent="10" name="USER_ID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="72" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>BOOK_SCORE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="73" parent="10" name="FK59ycr5liyb7pffucl3dq0cduo">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="74" parent="10" name="book_score_ibfk_1">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="75" parent="10" name="FKt0yavt4qygbisiud487syfdhc">
+      <ColNames>BOOK_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>book</RefTableName>
+      <RefColNames>BOOK_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="76" parent="10" name="book_score_ibfk_2">
+      <ColNames>BOOK_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>book</RefTableName>
+      <RefColNames>BOOK_ID</RefColNames>
+    </foreign-key>
+    <column id="77" parent="11" name="COMMENT_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="11" name="COMMENT_DATE">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="79" parent="11" name="COMMENT_CONT">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="80" parent="11" name="USER_ID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="81" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>COMMENT_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="82" parent="12" name="FILM_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="12" name="FILM_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="84" parent="12" name="FILM_DIREC">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="85" parent="12" name="FILM_WRI">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="86" parent="12" name="FILM_HERO">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="87" parent="12" name="FILM_AREA">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="88" parent="12" name="FILM_TYPE">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="89" parent="12" name="FILM_LANG">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="90" parent="12" name="FILM_DATE">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="91" parent="12" name="FILM_LEN">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="92" parent="12" name="FILM_INTRO">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="93" parent="12" name="FILM_IMG">
+      <Position>12</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="94" parent="12" name="FILM_SC">
+      <Position>13</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="95" parent="12" name="FILM_DBSC">
+      <Position>14</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="96" parent="12" name="USER_ID">
+      <Position>15</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="97" parent="12" name="FKth4qvuapxf0finwnkqiwseg9y">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="98" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>FILM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="99" parent="12" name="FKth4qvuapxf0finwnkqiwseg9y">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <column id="100" parent="13" name="FILM_LCOM_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="13" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="102" parent="13" name="FILM_LCOM_CONTENT">
+      <Position>3</Position>
+      <DataType>varchar(10000)|0</DataType>
+    </column>
+    <column id="103" parent="13" name="FILM_LCOM_DATE">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="104" parent="13" name="FILM_LCOM_LIKE">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="105" parent="13" name="FILM_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="106" parent="13" name="FOR_FILM_ID">
+      <ColNames>FILM_ID</ColNames>
+    </index>
+    <index id="107" parent="13" name="FOR_USER_ID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="108" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>FILM_LCOM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="109" parent="13" name="FKt7w8tyonc1ak1jef96avcr1ra">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="110" parent="13" name="film_lcom_ibfk_2">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="111" parent="13" name="FK9lk2jo70xai8kg334shmycajf">
+      <ColNames>FILM_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>film</RefTableName>
+      <RefColNames>FILM_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="112" parent="13" name="film_lcom_ibfk_1">
+      <ColNames>FILM_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>film</RefTableName>
+      <RefColNames>FILM_ID</RefColNames>
+    </foreign-key>
+    <column id="113" parent="14" name="FILM_SCOM_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="14" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="115" parent="14" name="FILM_SCOM_CONTENT">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="116" parent="14" name="FILM_SCOM_DATE">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="117" parent="14" name="FILM_SCOM_LIKE">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="118" parent="14" name="FILM_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="119" parent="14" name="FOR_FILM_ID">
+      <ColNames>FILM_ID</ColNames>
+    </index>
+    <index id="120" parent="14" name="FOR_USER_ID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="121" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>FILM_SCOM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="122" parent="14" name="FK8ulkfqfewt5c5so74h5n7otuu">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="123" parent="14" name="FOR_USER_ID">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="124" parent="14" name="FKcu9i07lij6fr1l8aco66gvnfr">
+      <ColNames>FILM_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>film</RefTableName>
+      <RefColNames>FILM_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="125" parent="14" name="FOR_FILM_ID">
+      <ColNames>FILM_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>film</RefTableName>
+      <RefColNames>FILM_ID</RefColNames>
+    </foreign-key>
+    <column id="126" parent="15" name="FILM_SCORE_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="15" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="128" parent="15" name="FILM_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="129" parent="15" name="FILM_SCORE">
+      <Position>4</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <index id="130" parent="15" name="FILM_ID">
+      <ColNames>FILM_ID</ColNames>
+    </index>
+    <index id="131" parent="15" name="USER_ID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="132" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>FILM_SCORE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="133" parent="15" name="FKfxe8oj4ave2se7x55ap9ltfpn">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="134" parent="15" name="film_score_ibfk_1">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="135" parent="15" name="FKbybd3r34pdrvbmmrwgph9444l">
+      <ColNames>FILM_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>film</RefTableName>
+      <RefColNames>FILM_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="136" parent="15" name="film_score_ibfk_2">
+      <ColNames>FILM_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>film</RefTableName>
+      <RefColNames>FILM_ID</RefColNames>
+    </foreign-key>
+    <column id="137" parent="16" name="MUSIC_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="138" parent="16" name="MUSIC_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="139" parent="16" name="MUSIC_SINGER">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="140" parent="16" name="MUSIC_TYPE">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="141" parent="16" name="MUSIC_DATE">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="142" parent="16" name="MUSIC_PUB">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="143" parent="16" name="MUSIC_INTRO">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="144" parent="16" name="MUSIC_SONGS">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="145" parent="16" name="MUSIC_SC">
+      <Position>9</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="146" parent="16" name="MUSIC_DBSC">
+      <Position>10</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="147" parent="16" name="USER_ID">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="148" parent="16" name="FKmlp6upq1als3xexnx407imj0e">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="149" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MUSIC_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="150" parent="16" name="FKmlp6upq1als3xexnx407imj0e">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <column id="151" parent="17" name="MUSIC_LCOM_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="152" parent="17" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="153" parent="17" name="MUSIC_LCOM_CONTENT">
+      <Position>3</Position>
+      <DataType>varchar(10000)|0</DataType>
+    </column>
+    <column id="154" parent="17" name="MUSIC_LCOM_DATE">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="155" parent="17" name="MUSIC_LCOM_LIKE">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="156" parent="17" name="MUSIC_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="157" parent="17" name="FOR_MUSIC_ID">
+      <ColNames>MUSIC_ID</ColNames>
+    </index>
+    <index id="158" parent="17" name="FOR_USERID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="159" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MUSIC_LCOM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="160" parent="17" name="FK6cd8ppbcqf21xek6xfr10qd55">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="161" parent="17" name="music_lcom_ibfk_2">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="162" parent="17" name="FKsdpf1ov5a9fbfmk0eliwn9ele">
+      <ColNames>MUSIC_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>music</RefTableName>
+      <RefColNames>MUSIC_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="163" parent="17" name="music_lcom_ibfk_1">
+      <ColNames>MUSIC_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>music</RefTableName>
+      <RefColNames>MUSIC_ID</RefColNames>
+    </foreign-key>
+    <column id="164" parent="18" name="MUSIC_SCOM_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="165" parent="18" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="166" parent="18" name="MUSIC_SCOM_CONTENT">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="167" parent="18" name="MUSIC_SCOM_DATE">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="168" parent="18" name="MUSIC_SCOM_LIKE">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="169" parent="18" name="MUSIC_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="170" parent="18" name="FOR_MUSIC_ID">
+      <ColNames>MUSIC_ID</ColNames>
+    </index>
+    <index id="171" parent="18" name="FOR_USERID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="172" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MUSIC_SCOM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="173" parent="18" name="FKijakv09vb45qpt7sk8oj93nbc">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="174" parent="18" name="FOR_USERID">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="175" parent="18" name="FK4rrvlktcgrnx9j7bq16ns51n2">
+      <ColNames>MUSIC_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>music</RefTableName>
+      <RefColNames>MUSIC_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="176" parent="18" name="FOR_MUSIC_ID">
+      <ColNames>MUSIC_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>music</RefTableName>
+      <RefColNames>MUSIC_ID</RefColNames>
+    </foreign-key>
+    <column id="177" parent="19" name="MUSIC_SCORE_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="178" parent="19" name="USER_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="179" parent="19" name="MUSIC_ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="180" parent="19" name="MUSIC_SCORE">
+      <Position>4</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <index id="181" parent="19" name="MUSIC_ID">
+      <ColNames>MUSIC_ID</ColNames>
+    </index>
+    <index id="182" parent="19" name="USER_ID">
+      <ColNames>USER_ID</ColNames>
+    </index>
+    <key id="183" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MUSIC_SCORE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="184" parent="19" name="FKdttnytejod5v1ay5ne0ghvwtv">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="185" parent="19" name="music_score_ibfk_1">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="186" parent="19" name="FK8vvinma6rwos0iwxvxbk0holi">
+      <ColNames>MUSIC_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>music</RefTableName>
+      <RefColNames>MUSIC_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="187" parent="19" name="music_score_ibfk_2">
+      <ColNames>MUSIC_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>music</RefTableName>
+      <RefColNames>MUSIC_ID</RefColNames>
+    </foreign-key>
+    <column id="188" parent="20" name="USER_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="189" parent="20" name="USERNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="190" parent="20" name="PASSWORD">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="191" parent="20" name="REGISTER_DATE">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="192" parent="20" name="IMAGE">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="193" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>USER_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="194" parent="21" name="USER_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="195" parent="21" name="FRIEND_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="196" parent="21" name="FKl5vmfmm7sy6u8r71mcbsqd0q6">
+      <ColNames>FRIEND_ID</ColNames>
+    </index>
+    <key id="197" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>USER_ID
+FRIEND_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="198" parent="21" name="FK9n33ihdifbf6jst2un2s6nrfc">
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="199" parent="21" name="FKl5vmfmm7sy6u8r71mcbsqd0q6">
+      <ColNames>FRIEND_ID</ColNames>
+      <RefSchemaName>315douban</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>USER_ID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

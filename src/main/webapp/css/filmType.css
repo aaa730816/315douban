@@ -1,0 +1,19 @@
+#filmTypesBody,#filmsOFType{
+    /*display: inline-block;*/
+    word-wrap: break-word;
+    word-break: break-all;
+    margin:0px auto;
+}
+#filmTypesTitle,#typeName{
+    font-size: 48px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+.typeA{
+    color: #ffffff;
+    cursor: pointer;
+}
+.typeA:hover{
+    color: #ffffff;
+    text-decoration: none;
+}

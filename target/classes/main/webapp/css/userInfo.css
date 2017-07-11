@@ -1,0 +1,44 @@
+#listGroup{
+    float: left;
+}
+#infoContent{
+    float: right;
+}
+#changeBtnDiv{
+    text-align: center;
+}
+#changePassForm{
+    padding-left: 15%;
+}
+#searchFriDiv{
+    margin-left: 27%;
+}
+#addFriTitle{
+    text-align: center;
+    width:200px;
+    margin: 0px auto;
+}
+#addFriendsBtn{
+    float: right;
+}
+.friImg{
+    width: 70px;
+    height: 70px;
+}
+table{
+    text-align: center;
+}
+.friSpan{
+    padding-top:50%;
+    font-size: 20px;
+}
+th{
+    text-align: center;
+}
+#title{
+    font-size: 48px;
+}
+img{
+    width: 150px;
+    height: 150px;
+}

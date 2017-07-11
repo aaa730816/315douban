@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="main.entities.FilmLcom" table="film_lcom" schema="315douban">
+        <id name="filmLcomId" column="FILM_LCOM_ID"/>
+        <property name="filmLcomContent" column="FILM_LCOM_CONTENT"/>
+        <property name="filmLcomDate" column="FILM_LCOM_DATE"/>
+        <property name="filmLcomLike" column="FILM_LCOM_LIKE"/>
+        <property name="title" column="FILM_LCOM_TITLE"/>
+        <set name="comments">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.Comment"></one-to-many>
+        </set>
+        <many-to-one name="user" class="main.entities.User" column="USER_ID"></many-to-one>
+        <many-to-one name="film" class="main.entities.Film" column="FILM_ID"></many-to-one>
+    </class>
+</hibernate-mapping>

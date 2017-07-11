@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="_315douban:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="315douban-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="_315douban:war exploded" />
+    </root>
+  </artifact>
+</component>

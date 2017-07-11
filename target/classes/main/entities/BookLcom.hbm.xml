@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="main.entities.BookLcom" table="book_lcom" schema="315douban">
+        <id name="bookLcomId" column="BOOK_LCOM_ID"/>
+        <property name="bookLcomContent" column="BOOK_LCOM_CONTENT"/>
+        <property name="bookLcomDate" column="BOOK_LCOM_DATE"/>
+        <property name="bookLcomLike" column="BOOK_LCOM_LIKE"/>
+        <property name="title" column="BOOL_LCOM_TITLE"/>
+        <set name="comments">
+            <key column="USER_ID"></key>
+            <one-to-many class="main.entities.Comment"></one-to-many>
+        </set>
+        <many-to-one name="user" class="main.entities.User" column="USER_ID"></many-to-one>
+        <many-to-one name="book" class="main.entities.Book" column="BOOK_ID"></many-to-one>
+    </class>
+</hibernate-mapping>
